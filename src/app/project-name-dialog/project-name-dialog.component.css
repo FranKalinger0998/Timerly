@@ -1,0 +1,19 @@
+.background{
+    align-items: center;
+    background-color: ghostwhite;
+    width:500px;
+    position: absolute;
+    display: flex;
+    top: 20%;
+    padding: 16px 16px;
+    left: 35%;
+    flex-direction: column;
+    align-items: center;
+    border-radius:20px;
+    border-color: grey;
+    border-style:solid;
+}
+.button{
+    width: 50px;
+    margin: 10px;
+}

@@ -1,0 +1,33 @@
+<div class="mat-elevation-z8" >
+  <table mat-table class="full-width-table" matSort aria-label="Elements">
+    
+    <ng-container class="space" matColumnDef="project">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>project</th>
+      <td class="space" mat-cell *matCellDef="let row">{{row.project}}</td>
+    </ng-container>
+    <ng-container class="space" matColumnDef="start">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>start</th>
+      <td class="space" mat-cell *matCellDef="let row">{{row.start}}</td>
+    </ng-container>
+    <ng-container class="space" matColumnDef="end">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>end</th>
+      <td class="space" mat-cell *matCellDef="let row">{{row.end}}</td>
+    </ng-container>
+    <ng-container class="space" matColumnDef="duration">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>duration</th>
+      <td class="space" mat-cell *matCellDef="let row">{{row.duration}}</td>
+    </ng-container>
+    
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator
+      [length]="dataSource.data.length"
+      [pageIndex]="0"
+      [pageSize]="5"
+      [pageSizeOptions]="[5, 10, 20]"
+      aria-label="Select page">
+  </mat-paginator>
+</div>
